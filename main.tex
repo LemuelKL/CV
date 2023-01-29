@@ -1,4 +1,4 @@
-\documentclass[a4paper,20pt]{article}
+\documentclass{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -10,7 +10,6 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
-\usepackage{subfiles}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -26,86 +25,152 @@
 \addtolength{\textheight}{1in}
 
 \urlstyle{rm}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{ #2}
-  }
-}
-
-\newcommand{\resumeItemWithoutTitle}[1]{
-  \item\small{
-    {\vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
+\renewcommand*\arraystretch{1.3}
+\newcommand{\jobTitle}[3]{
+    \vspace{0.3cm}
+    \begin{tabular*}{1\textwidth}{||l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2\\
+        #3 &
     \end{tabular*}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
-\renewcommand{\labelitemii}{$\circ$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\companyTitle}[2]{
-  \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-4pt}
-}
-\newcommand{\jobTitle}[2]{
-  \item[]
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{#1} & \textit{#2} \\
-    \end{tabular*}\vspace{-4pt}
-}
-\newcommand{\jobItem}[2]{
-  \item\small{
-    \textbf{#1}{ #2}
-  }
-}
-
-% define KaTeX logo
-\makeatletter
-\DeclareRobustCommand{\KaTeX}{%
-  K\kern -.19em
-  {\sbox \z@ T\vbox to\ht \z@ {\hbox{%
-  \check@mathfonts
-  \fontsize\sf@size\z@
-  \selectfont A}%
-  \vss}%
-}\kern -.15em
-\TeX}
-\makeatother
-
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+\setlength\parindent{0em}
 
 \begin{document}
-\subfile{heading}
-\section{Education}
-\subfile{education}
-\section{Technical Skills Summary}
-\subfile{skills}
-\section{Experience}
-\subfile{experience}
-\section{Projects}
-\subfile{projects}
-\section{Activities}
-\subfile{activities}
+\begin{center}
+  \textbf{\LARGE Lemuel LEE Kwok Lam}
+
+  \vspace{0.2cm}
+  Computer Science Penultimate Year Student
+
+  Self-motivated and highly adaptable with a passion for technology and a desire to learn.
+
+  \vspace{0.2cm}
+  \begin{tabular}{ c c c }
+    London \& Hong Kong & \href{mailto:lemuellee.kl@gmail.com}{lemuellee.kl@gmail.com} & +44 07597243186 \& +852 62382237
+  \end{tabular}
+
+  \vspace{0.2cm}
+  \begin{tabular}{ c c c c }
+    \faGlobe \space \href{https://lemuellee.com}{lemuellee.com} &
+    \faLinkedin \space \href{https://linkedin.com/in/lemuelkl}{linkedin.com/in/lemuelkl} &
+    \faGithub \space \href{https://www.github.com}{github.com/LemuelKL}
+  \end{tabular}
+\end{center}
+
+\section{EXPERIENCE}
+
+\jobTitle
+{Question Writer \& Programmer}
+{Jul 2022 --- Aug 2022 \& Mar 2021 --- Aug 2021}
+{Shatin Pui Ying College}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Authored multiple-choice question templates for the HKDSE Mathematics and Physics syllabuses.
+    \item Programmed in a custom external domain-specific language based on JavaScript and KaTeX.
+    \item Used such meta-language to generate HTML code, mathematical tables, graphs, and 3D graphics.
+    \item Participated in the development of the language.
+\end{itemize}
+
+\jobTitle
+{Fullstack Developer}
+{Jun 2022 --- Aug 2022}
+{Shatin Pui Ying College}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Developed an electronic ticketing system for the school Musical.
+    \begin{itemize}
+        \item Semi-automated order management, seat arrangement, mission control, and bulk e-mailing.
+        \item Admission via QR code.
+    \end{itemize}
+    \item Developed a series of timetable scheduling web apps for exams, lessons, and HKDSE invigilation.
+\end{itemize}
+
+\jobTitle
+{Student Teaching Assistant --- ENGG1340 Computer Programming II}
+{Jan 2022 --- Jun 2022}
+{The University of Hong Kong}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Tutored a class of 85 in topics:
+    \begin{itemize}
+        \item Advanced Python programming.
+        \item Linux shell commands.
+        \item Shell scripts.
+        \item C/C++ programming.
+        \item Separate compilation techniques.
+    \end{itemize}
+    \item Hosted weekly lab sessions.
+    \item Reviewed assignments according to a marking scheme.
+    \item Guided discussions on Moodle.
+\end{itemize}
+
+\jobTitle
+{Student Teaching Assistant --- ENGG1330 Computer Programming I}
+{Sep 2021 --- Dec 2021}
+{The University of Hong Kong}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Tutored a class of 45 in topics:
+    \begin{itemize}
+        \item Python programming.
+        \item Searching and sorting algorithms.
+    \end{itemize}
+    \item Hosted weekly lab sessions.
+    \item Reviewed assignments according to a marking scheme.
+    \item Guided discussions on Ed.
+    \item Gave individual video feedback on coursework.
+\end{itemize}
+
+\section{EDUCATION}
+
+\jobTitle
+{Bachelor of Engineering in Computer Science}
+{Sep 2020 --- Jan 2024}
+{The University of Hong Kong}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Focus: Theoretical Computer Science
+\end{itemize}
+
+\jobTitle
+{International Exchange}
+{Jan 2023 --- Jun 2023}
+{Royal Holloway, University of London}
+\begin{itemize}[leftmargin=1.2cm]
+    \item School of Engineering, Physical and Mathematical Sciences.
+    \item Courses from Department of Computer Science.
+\end{itemize}
+
+\jobTitle
+{Secondary Education --- Hong Kong Diploma of Secondary Education}
+{Sep 2013 --- Jun 2020}
+{Shatin Pui Ying College}
+\begin{itemize}[leftmargin=1.2cm]
+    \item First in Information and Communications Technology in final year.
+    \item Third in Physics in final year.
+\end{itemize}
+
+\section{CERTIFICATIONS}
+
+\jobTitle
+{IELTS Academic}
+{May 2022}
+{Overall 7.5}
+
+\jobTitle
+{TOEIC Listening \& Reading Test}
+{Jun 2018}
+{Overall 925}
+
+\jobTitle
+{ABRSM Practical Piano Grade 7}
+{2011}
+{Distinction}
+
+\jobTitle
+{ABRSM Music Theory Grade 5}
+{2010}
+{Pass}
+
+
+
 \end{document}
