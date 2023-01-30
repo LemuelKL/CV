@@ -4,7 +4,7 @@
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
@@ -27,21 +27,28 @@
 \addtolength{\textheight}{1in}
 
 \urlstyle{rm}
-\renewcommand*\arraystretch{1.3}
 
 \newcommand{\jobTitle}[3]{
-\begin{tabularx}{\linewidth}{ X r }
+\vspace{0.4cm}
+\begin{tabularx}{0.99\linewidth}{ X r }
     \textbf{#1} & #2\\
     \textit{#3} &
 \end{tabularx}
+\vspace{0.2cm}
 }
 
 \titleformat{\section}{
   \scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+}{}{0em}{}[\color{RoyalPurple}\titlerule\vspace{-0.4cm}]
 \setlength\parindent{0em}
 
-\renewcommand{\labelitemi}{\ding{111}}
+\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\ding{111}}}
+\renewcommand{\labelitemii}{\textcolor{RoyalPurple}{--}}
+\newenvironment{descitemize}
+{ \begin{itemize}[leftmargin=1.4cm,,topsep=0pt]
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
 
 \begin{document}
 \setlength{\footskip}{3.60004pt}
@@ -67,20 +74,20 @@
 {Question Writer \& Programmer}
 {Jul 2022 --- Aug 2022 \& Mar 2021 --- Aug 2021}
 {Shatin Pui Ying College}
-\begin{itemize}[leftmargin=1.2cm]
+\begin{descitemize}
     \item Authored multiple-choice question templates following the HKDSE Mathematics and Physics syllabuses
     \item Programmed in a custom external domain-specific language based on JavaScript and KaTeX
     \item Used such meta-language to generate HTML code, mathematical tables, graphs, and 3D graphics
     \item Typeset mathematical equations
     \item Participated in the development of the language
     \item Mentioned in a weekly article of Sing Tao Daily: \href{https://std.stheadline.com/smartparents/article/2572}{https://std.stheadline.com/smartparents/article/2572}
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Fullstack Developer}
 {Jun 2022 --- Aug 2022}
 {Shatin Pui Ying College}
-\begin{itemize}[leftmargin=1.2cm]
+\begin{descitemize}
     \item Developed an electronic ticketing system for the school Musical.
     \begin{itemize}
         \item Semi-automated order management, seat arrangement, mission control, and bulk e-mailing
@@ -93,13 +100,13 @@
         \item Supports multiple constraints such as teacher availability, room capacity, and lesson duration
         \item Generalised some core functionalities into a library for future use
     \end{itemize}
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Student Teaching Assistant --- ENGG1340 Computer Programming II}
 {Jan 2022 --- Jun 2022}
 {The University of Hong Kong}
-\begin{itemize}[leftmargin=1.2cm]
+\begin{descitemize}
     \item Tutored a class of 85 in topics:
     \begin{itemize}
         \item Advanced Python programming
@@ -111,14 +118,14 @@
     \item Hosted weekly lab sessions
     \item Reviewed assignments according to a marking scheme
     \item Guided discussions on Moodle
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Student Teaching Assistant --- ENGG1330 Computer Programming I}
 {Sep 2021 --- Dec 2021}
 {The University of Hong Kong}
-\begin{itemize}[leftmargin=1.2cm]
-    \item Tutored a class of 45 in topics:
+\begin{descitemize}
+        \item Tutored a class of 45 in topics:
     \begin{itemize}
         \item Python programming
         \item Searching and sorting algorithms
@@ -127,7 +134,7 @@
     \item Reviewed assignments according to a marking scheme
     \item Guided discussions on Ed
     \item Gave individual video feedback on coursework
-\end{itemize}
+\end{descitemize}
 
 \section{EDUCATION}
 
@@ -135,26 +142,26 @@
 {Bachelor of Engineering in Computer Science}
 {Sep 2020 --- Jan 2024}
 {The University of Hong Kong}
-\begin{itemize}[leftmargin=1.2cm]
+\begin{descitemize}
     \item Pursuing Focus --- Theoretical Computer Science
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {International Exchange}
 {Jan 2023 --- Jun 2023}
 {Royal Holloway, University of London}
-\begin{itemize}[leftmargin=1.2cm]
+\begin{descitemize}
     \item Computer Science
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Secondary Education --- Hong Kong Diploma of Secondary Education}
 {Sep 2013 --- Jun 2020}
 {Shatin Pui Ying College}
-\begin{itemize}[leftmargin=1.2cm]
+\begin{descitemize}
     \item First in Information and Communications Technology in final year
     \item Third in Physics in final year
-\end{itemize}
+\end{descitemize}
 
 \section{CERTIFICATIONS}
 
@@ -206,22 +213,22 @@
 {ALGOGENE Algo Crypto Trading Challenge 2022 (Global)}
 {Jan 2023}
 {Probabilistic Approach on Price Movement Using Famous Indicators}
-\begin{itemize}
+\begin{descitemize}
     \item Candle patterns, Order Block, RSI, and MFI as trading signals
     \item Variable volume base on past limit orders
     \item Achieved 530M PnL from 1M during Test Round for BTCUSD on the 2018-2020 market
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Jane Street Electronic Trading Challenge 2022 (Hong Kong)}
 {Nov 2022}
 {First runner-up in terms of final capital}
-\begin{itemize}
+\begin{descitemize}
     \item Programmed a bot to interactive with a virtual exchange to trade with computers and other participants
     \item Traded various kinds of stocks, bonds, ADRs, and ETFs
     \item Strategy focused on market-making and arbitrage
     \item High frequency and tick-based
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {J.P. Morgan Code For Good 2022 Challenge (Hong Kong)}
@@ -242,22 +249,22 @@
 {STEM Camp 2019 --- Shatin Pui Ying College}
 {Apr 2019}
 {Appointed Head of STEM Committee; Organized a day camp for visiting students from 16 primary schools}
-\begin{itemize}
+\begin{descitemize}
     \item Coordinated school staff, teachers, student helpers, and visiting schools
     \item Designed a number of booths, games and experiments
     \item Developed an automated system with Google Sheet to keep track of the scores of all students across all booths and quizzes throughout the day
     \item Developed with LAMP stack, a real-time room status monitoring system with check-in and out via RFID cards
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {EE International Summer Camp 2017 --- City University of Hong Kong}
 {Summer 2017}
 {Runner-up in the camp's concluding Mini Robotic Car Competition}
-\begin{itemize}
+\begin{descitemize}
     \item Designed, 3D printed, and soldered a robotic car
     \item Programmed an Arduino board
     \item Learnt JAVA and programmed an Android app for remote control via Bluetooth Low Energy
-\end{itemize}
+\end{descitemize}
 
 \section{PROJECTS}
 
@@ -265,114 +272,114 @@
 {lemuellee.com}
 {Jan 2023}
 {Personal Website, Portfolio, Blogging}
-\begin{itemize}
+\begin{descitemize}
     \item Includes About, Portfolio, Resume, and a personal blog
-    \item SvelteKit, TailwindCSS, TypeScript, KaTeX, Vite, Netlify, MDsveX, PrismJS, RehypeJS
+    \item SvelteKit, Tailwind CSS, TypeScript, KaTeX, Vite, Netlify, MDsveX, PrismJS, RehypeJS
     \item Custom Content Management System for managing dynamic imports of markdown files
 	\item Supports Svelte, KaTeX, and HTML \& CSS inside markdown files
 	\item Fully static and pre-rendered
 	\item Achieved in Google Lighthouse: Performance (96), Accessibility (97), Best Practices (100), SEO (100)
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {CIFAR10-HOG-PCA-SVM --- COMP3314 Machine Learning Coursework}
 {Dec 2022}
 {Machine Learning, Computer Vision}
-\begin{itemize}
+\begin{descitemize}
     \item Image classifier for the CIFAR-10 dataset
     \item 62\% accuracy (top 10\% of class), with only 5 minutes of training time
     \item Support Vector Machine with the radial basis function kernel
     \item Pure statistical approach with no deep neural network or convolutional kernels
     \item Feature extraction via Histogram of Oriented Gradients
     \item Dimensionality reduction via Grayscaling, HOG, and Principal Component Analysis
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Parallel Samplesort --- COMP3230 Principals of Operating Systems Coursework}
 {Nov 2022}
 {Multi-threading, Semaphore, Mutex lock}
-\begin{itemize}
+\begin{descitemize}
     \item Mutli-threaded Samplesort with arbitrary number of threads
     \item Sorts $10^8$ integers in 5 seconds with 16 threads
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {3230shell --- COMP3230 Principals of Operating Systems Coursework}
 {Oct 2022}
 {Operating Systems, Linux, Process Management, C}
-\begin{itemize}
+\begin{descitemize}
     \item A Linux shell which supports command parsing, program execution, signals handling, multiple background processes, arbitrary number of piped processes and process statistics in any combinations
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Enoch Bible Reading Challenge}
 {Oct 2022}
 {Fullstack, Progressive Web App}
-\begin{itemize}
+\begin{descitemize}
     \item Bible reading challenge Progressive Web App tailored made for a church. Readers read 8 chapters weekly to finish all 1189. Includes leader-board and progress tracker
 	\item Single Page Application, and instantly install-able as a Progressive Web App on all major operating systems
     \item Built with Vue.js, Tailwind CSS, Supabase, and Netlify
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {HackOS}
 {May 2022}
 {Unity, C\#, Game Development, Cyber-security}
-\begin{itemize}
+\begin{descitemize}
     \item Offensive cyber-security simulator game. Sandbox experience with pruned replicas of nmap, ssh, hydra, and an array of UNIX-like commands.
     \item Participating project of the 6th InnoShow held by the Faculty of Engineering, The University of Hong Kong
     \begin{itemize}
         \item \href{https://innoacademy.engg.hku.hk/hack/}{https://innoacademy.engg.hku.hk/hack/}
     \end{itemize}
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {RNA Fighter --- ENGG1340 Computer Programming II Coursework}
 {May 2021}
 {C++, Ncurses}
-\begin{itemize}
+\begin{descitemize}
     \item Terminal puzzle-solving game with interactive and colored text user-interface
     \item Player types RNA sequences to defuse viruses in time
 	\item Has in-game shop, currency, and high-score leaderboard
 	\item Includes text-based dialogues, scroll view, page navigation, and in-place buffer update
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Duckietown --- COMP3414 Experiential Learning on Artificial Intelligence and Robotics}
 {Dec 2020}
 {Robotics, Computer Vision, Reinforcement Learning, Self Driving}
-\begin{itemize}
+\begin{descitemize}
     \item Simulated self-driving for Duckietown with Deep Deterministic Policy Gradient with Actor \& Critic networks
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Bubble Sheet OMR}
 {Jun 2019}
 {Computer Vision, Python, OpenCV, Optical Mark Recognition, Qt}
-\begin{itemize}
+\begin{descitemize}
     \item GUI program written in Qt to detect multiple-choice question options given a bubble sheet pdf
     \item Coordinates can be exported for automatic marking purpose
     \item Supports fully automatic detection, and fine manual adjustments
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {School Library Management System --- HKDSE ICT School-based Assessment}
 {May 2019}
 {Qt, C++, SQLite}
-\begin{itemize}
+\begin{descitemize}
     \item GUI program that provides CRUD functionalities to common library administration, such as book categorization, borrow/return management, mass book record import, barcode scanning, and overdue alert
     \item Object-oriented and separately compiled
-\end{itemize}
+\end{descitemize}
 
 \jobTitle
 {Contact List Manager --- HKDSE ICT School-based Assessment}
 {May 2018}
 {Windows API, C++}
-\begin{itemize}
+\begin{descitemize}
     \item Terminal contact manager with colored text user-interface
     \item Provides CRUD functionalities to manage contacts with multiple fields
     \item Uses hashing algorithms for authentication
-\end{itemize}
+\end{descitemize}
 
 \section{COURSES}
 \vspace{0.3cm}
