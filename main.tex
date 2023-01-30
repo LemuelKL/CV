@@ -10,6 +10,8 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
+\usepackage{pifont}
+\usepackage{tabularx}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -26,34 +28,32 @@
 
 \urlstyle{rm}
 \renewcommand*\arraystretch{1.3}
+
 \newcommand{\jobTitle}[3]{
-    \vspace{0.3cm}
-    \begin{tabular*}{1\textwidth}{||l@{\extracolsep{\fill}}r}
-        \textbf{#1} & #2\\
-        #3 &
-    \end{tabular*}
+\begin{tabularx}{\linewidth}{ X r }
+    \textbf{#1} & #2\\
+    \textit{#3} &
+\end{tabularx}
 }
 
 \titleformat{\section}{
-  \vspace{-5pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 \setlength\parindent{0em}
 
+\renewcommand{\labelitemi}{\ding{111}}
+
 \begin{document}
+\setlength{\footskip}{3.60004pt}
 \begin{center}
   \textbf{\LARGE Lemuel LEE Kwok Lam}
 
   \vspace{0.2cm}
   Computer Science Penultimate Year Student
-
-  Self-motivated and highly adaptable with a passion for technology and a desire to learn.
-
   \vspace{0.2cm}
   \begin{tabular}{ c c c }
     London \& Hong Kong & \href{mailto:lemuellee.kl@gmail.com}{lemuellee.kl@gmail.com} & +44 07597243186 \& +852 62382237
   \end{tabular}
-
-  \vspace{0.1cm}
   \begin{tabular}{ c c c c }
     \faGlobe \space \href{https://lemuellee.com}{lemuellee.com} &
     \faLinkedin \space \href{https://linkedin.com/in/lemuelkl}{linkedin.com/in/lemuelkl} &
@@ -64,7 +64,7 @@
 \section{EXPERIENCE}
 
 \jobTitle
-{Question Writer \& Programmer --- WinMaths}
+{Question Writer \& Programmer}
 {Jul 2022 --- Aug 2022 \& Mar 2021 --- Aug 2021}
 {Shatin Pui Ying College}
 \begin{itemize}[leftmargin=1.2cm]
@@ -136,7 +136,7 @@
 {Sep 2020 --- Jan 2024}
 {The University of Hong Kong}
 \begin{itemize}[leftmargin=1.2cm]
-    \item Focus: Theoretical Computer Science
+    \item Pursuing Focus --- Theoretical Computer Science
 \end{itemize}
 
 \jobTitle
@@ -193,7 +193,7 @@
 \jobTitle
 {Frameworks \& Libraries}
 {}
-{Node.js, Express.js, jQuery, React, Vue.js, SvelteKit, Quasar, Tailwind CSS, Flask, Qt, Unity, \\OpenCV, Sklearn, TensorFlow, PyTorch}
+{Node.js, Express.js, jQuery, React, Vue.js, SvelteKit, Quasar, Tailwind CSS, Flask, Qt, Unity, OpenCV, Sklearn, TensorFlow, PyTorch}
 
 \jobTitle
 {Platforms \& Tools}
@@ -372,6 +372,51 @@
     \item Terminal contact manager with colored text user-interface
     \item Provides CRUD functionalities to manage contacts with multiple fields
     \item Uses hashing algorithms for authentication
+\end{itemize}
+
+\section{COURSES}
+\vspace{0.3cm}
+
+Engineering Cores
+\begin{itemize}
+    \item[] MATH1011 --- University Mathematics I
+    \item[] MATH1851 --- Calculus and Ordinary Differential Equations
+    \item[] MATH1853 --- Linear Algebra, Probability and Statistics
+    \item[] ENGG1300 --- Fundamental Mechanics
+    \item[] ENGG1310 --- Electricity and Electronics
+    \item[] ENGG1320 --- Engineers in the Modern World
+\end{itemize}
+
+Computer Science Cores
+\begin{itemize}
+    \item[] ENGG1330 --- Computer Programming I
+    \item[] ENGG1340 --- Computer Programming II
+    \item[] COMP2119 --- Introduction to Data Structures and Algorithms
+    \item[] COMP2120 --- Computer Organization
+    \item[] COMP2121 --- Discrete Mathematics
+    \item[] COMP2396 --- Object-oriented Programming and JAVA
+    \item[] COMP3230 --- Principles of Operating Systems
+    \item[] COMP3278 --- Introduction to Database Management Systems
+    \item[] COMP3297 --- Software Engineering
+\end{itemize}
+
+Computer Science Electives
+\begin{itemize}
+    \item[] COMP3414 --- Experimental Learning on Artificial Intelligence and Robotics
+    \item[] COMP3322 --- Modern Technologies on World Wide Web
+    \item[] COMP3329 --- Computer Game Design and Programming
+    \item[] COMP3314 --- Machine Learning
+    \item[] COMP3340 --- Applied Deep Learning
+\end{itemize}
+
+Common Cores
+\begin{itemize}
+    \item[] CCST9020 --- Sustainable Development of the Built Environment
+    \item[] CCST9042 --- The World of Waves
+    \item[] CCGL9038 --- Global Englishes
+    \item[] CCCH9005 --- The Chinese Cultural Revolution
+    \item[] CCHU9039 --- Sexuality and Culture
+    \item[] CCHU9061 --- Science and Religion: Questioning Truth, Knowledge and Life
 \end{itemize}
 
 \end{document}
