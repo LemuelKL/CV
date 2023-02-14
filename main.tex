@@ -12,6 +12,7 @@
 \usepackage{fontawesome5}
 \usepackage{pifont}
 \usepackage{tabularx}
+\usepackage{graphicx}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -52,35 +53,40 @@
 
 \begin{document}
 \setlength{\footskip}{3.60004pt}
-\begin{center}
-  \textbf{\LARGE Lemuel LEE Kwok Lam}
+\textbf{\LARGE Lemuel LEE Kwok Lam}
+\vspace{0.15cm}
 
-  \vspace{0.2cm}
-  Computer Science Penultimate Year Student
-  \vspace{0.2cm}
-  \begin{tabular}{ c c c }
-    London \& Hong Kong & \href{mailto:lemuellee.kl@gmail.com}{lemuellee.kl@gmail.com} & +44 07597243186 \& +852 62382237
-  \end{tabular}
-  \begin{tabular}{ c c c c }
+Computer Science Penultimate Year Student
+\vspace{0.15cm}
+
+\begin{tabular}{@{} c | c | c }
+    \href{mailto:lemuellee.kl@gmail.com}{lemuellee.kl@gmail.com} &
+    +44 07597243186 \& +852 62382237 &
+    London \& Hong Kong
+    
+    \\
     \faGlobe \space \href{https://lemuellee.com}{lemuellee.com} &
     \faLinkedin \space \href{https://linkedin.com/in/lemuelkl}{linkedin.com/in/lemuelkl} &
     \faGithub \space \href{https://www.github.com}{github.com/LemuelKL}
-  \end{tabular}
-\end{center}
+\end{tabular}
 
+\vspace{1cm}
+\hfill
+\smash{\includegraphics[width=3cm]{avatar-transperant.png}}
+
+\vspace{-1cm}
 \section{EXPERIENCE}
 
 \jobTitle
 {Question Writer \& Programmer}
-{Jul 2022 --- Aug 2022 \& Mar 2021 --- Aug 2021}
+{Mar 2021 --- Aug 2021 \& Jul 2022 --- Aug 2022 }
 {Shatin Pui Ying College}
 \begin{descitemize}
     \item Authored multiple-choice question templates following the HKDSE Mathematics and Physics syllabuses
-    \item Programmed in a custom external domain-specific language based on JavaScript and KaTeX
-    \item Used such meta-language to generate HTML code, mathematical tables, graphs, and 3D graphics
+    \item Developed and programmed in a custom external domain-specific language based on JavaScript and KaTeX
+    \item Used such language to generate HTML code, mathematical tables, graphs, and 3D graphics
     \item Typeset mathematical equations
-    \item Participated in the development of the language
-    \item Mentioned in a weekly article of Sing Tao Daily: \href{https://std.stheadline.com/smartparents/article/2572}{https://std.stheadline.com/smartparents/article/2572}
+    \item Featured on Sing Tao Daily: \href{https://std.stheadline.com/smartparents/article/2572}{https://std.stheadline.com/smartparents/article/2572}
 \end{descitemize}
 
 \jobTitle
@@ -91,8 +97,6 @@
     \item Developed an electronic ticketing system for the school Musical.
     \begin{itemize}
         \item Semi-automated order management, seat arrangement, mission control, and bulk e-mailing
-        \item Admission via QR code
-        \item Supports CSV import and export
         \item Real-time multi-user editing with different permission levels
     \end{itemize}
     \item Developed a series of timetable scheduling web apps for exams, lessons, and HKDSE invigilation
@@ -103,44 +107,21 @@
 \end{descitemize}
 
 \jobTitle
-{Student Teaching Assistant --- ENGG1340 Computer Programming II}
-{Jan 2022 --- Jun 2022}
+{Student Teaching Assistant}
+{Sep 2021 --- Dec 2021 \& Jan 2022 --- Jun 2022}
 {The University of Hong Kong}
 \begin{descitemize}
-    \item Tutored a class of 85 in topics:
-    \begin{itemize}
-        \item Advanced Python programming
-        \item Linux shell commands
-        \item Shell scripts
-        \item C/C++ programming
-        \item Separate compilation techniques
-    \end{itemize}
+    \item ENGG1340 Computer Programming II: Advanced Python programming, Linux shell commands, Shell scripts, C/C++ programming, Separate compilation techniques
+    \item ENGG1330 Computer Programming I: Python programming, Searching and sorting algorithms
     \item Hosted weekly lab sessions
-    \item Reviewed assignments according to a marking scheme
-    \item Guided discussions on Moodle
-\end{descitemize}
-
-\jobTitle
-{Student Teaching Assistant --- ENGG1330 Computer Programming I}
-{Sep 2021 --- Dec 2021}
-{The University of Hong Kong}
-\begin{descitemize}
-        \item Tutored a class of 45 in topics:
-    \begin{itemize}
-        \item Python programming
-        \item Searching and sorting algorithms
-    \end{itemize}
-    \item Hosted weekly lab sessions
-    \item Reviewed assignments according to a marking scheme
-    \item Guided discussions on Ed
-    \item Gave individual video feedback on coursework
+    \item Reviewed assignments according to a marking scheme and gave individual video feedback
 \end{descitemize}
 
 \section{EDUCATION}
 
 \jobTitle
 {Bachelor of Engineering in Computer Science}
-{Sep 2020 --- Jan 2024}
+{Sep 2020 --- Jun 2024}
 {The University of Hong Kong}
 \begin{descitemize}
     \item Pursuing Focus --- Theoretical Computer Science
@@ -182,7 +163,7 @@
 
 \jobTitle
 {ABRSM Practical Piano Grade 7}
-{2011}
+{2012}
 {Distinction}
 
 \jobTitle
@@ -205,7 +186,7 @@
 \jobTitle
 {Platforms \& Tools}
 {}
-{Linux, Docker, Git, MySQL, MongoDB, Supabase, Arduino, Processing}
+{Linux, Docker, Git, MySQL, PostgreSQL, MongoDB, Supabase, Arduino, Processing}
 
 \section{ACTIVITIES}
 
