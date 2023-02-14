@@ -13,6 +13,13 @@
 \usepackage{pifont}
 \usepackage{tabularx}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -57,24 +64,23 @@
 \vspace{0.15cm}
 
 Computer Science Penultimate Year Student
-\vspace{0.15cm}
+\vspace{0.3cm}
 
-\begin{tabular}{@{} c | c | c }
-    \href{mailto:lemuellee.kl@gmail.com}{lemuellee.kl@gmail.com} &
-    +44 07597243186 \& +852 62382237 &
-    London \& Hong Kong
-    
+\begin{tabular}{@{} l @{\space}l | l @{\space}l | l }
+    \faEnvelope &\href{mailto:lemuellee.kl@gmail.com}{lemuellee.kl@gmail.com} &
+    +44 & 07597 243 186 &
+    London
     \\
-    \faGlobe \space \href{https://lemuellee.com}{lemuellee.com} &
-    \faLinkedin \space \href{https://linkedin.com/in/lemuelkl}{linkedin.com/in/lemuelkl} &
-    \faGithub \space \href{https://www.github.com}{github.com/LemuelKL}
+    \faGlobe &\href{https://lemuellee.com}{lemuellee.com} & +852 & 6238 2237 & Hong Kong\\
+    \faLinkedin & \href{https://linkedin.com/in/lemuelkl}{linkedin.com/in/lemuelkl}\\
+    \faGithub & \href{https://www.github.com}{github.com/LemuelKL}
 \end{tabular}
 
-\vspace{1cm}
+\vspace{0.5cm}
 \hfill
 \smash{\includegraphics[width=3cm]{avatar-transperant.png}}
 
-\vspace{-1cm}
+\vspace{-0.3cm}
 \section{EXPERIENCE}
 
 \jobTitle
@@ -90,7 +96,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{Fullstack Developer}
+{Full Stack Developer}
 {Jun 2022 --- Aug 2022}
 {Shatin Pui Ying College}
 \begin{descitemize}
@@ -102,7 +108,6 @@ Computer Science Penultimate Year Student
     \item Developed a series of timetable scheduling web apps for exams, lessons, and HKDSE invigilation
     \begin{itemize}
         \item Supports multiple constraints such as teacher availability, room capacity, and lesson duration
-        \item Generalised some core functionalities into a library for future use
     \end{itemize}
 \end{descitemize}
 
@@ -144,6 +149,7 @@ Computer Science Penultimate Year Student
     \item Third in Physics in final year
 \end{descitemize}
 
+\vspace{3cm}
 \section{CERTIFICATIONS}
 
 \jobTitle
@@ -243,8 +249,7 @@ Computer Science Penultimate Year Student
 {Runner-up in the camp's concluding Mini Robotic Car Competition}
 \begin{descitemize}
     \item Designed, 3D printed, and soldered a robotic car
-    \item Programmed an Arduino board
-    \item Learnt JAVA and programmed an Android app for remote control via Bluetooth Low Energy
+    \item Programmed an Arduino board and Android app for remote control via Bluetooth Low Energy
 \end{descitemize}
 
 \section{PROJECTS}
@@ -263,7 +268,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{CIFAR10-HOG-PCA-SVM --- COMP3314 Machine Learning Coursework}
+{CIFAR10-HOG-PCA-SVM}
 {Dec 2022}
 {Machine Learning, Computer Vision}
 \begin{descitemize}
@@ -276,7 +281,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{Parallel Samplesort --- COMP3230 Principals of Operating Systems Coursework}
+{Parallel Samplesort}
 {Nov 2022}
 {Multi-threading, Semaphore, Mutex lock}
 \begin{descitemize}
@@ -285,7 +290,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{3230shell --- COMP3230 Principals of Operating Systems Coursework}
+{3230shell}
 {Oct 2022}
 {Operating Systems, Linux, Process Management, C}
 \begin{descitemize}
@@ -315,7 +320,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{RNA Fighter --- ENGG1340 Computer Programming II Coursework}
+{RNA Fighter}
 {May 2021}
 {C++, Ncurses}
 \begin{descitemize}
@@ -326,7 +331,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{Duckietown --- COMP3414 Experiential Learning on Artificial Intelligence and Robotics}
+{Duckietown}
 {Dec 2020}
 {Robotics, Computer Vision, Reinforcement Learning, Self Driving}
 \begin{descitemize}
@@ -344,7 +349,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{School Library Management System --- HKDSE ICT School-based Assessment}
+{School Library Management System}
 {May 2019}
 {Qt, C++, SQLite}
 \begin{descitemize}
@@ -353,7 +358,7 @@ Computer Science Penultimate Year Student
 \end{descitemize}
 
 \jobTitle
-{Contact List Manager --- HKDSE ICT School-based Assessment}
+{Contact List Manager}
 {May 2018}
 {Windows API, C++}
 \begin{descitemize}
@@ -395,6 +400,11 @@ Computer Science Electives
     \item[] COMP3329 --- Computer Game Design and Programming
     \item[] COMP3314 --- Machine Learning
     \item[] COMP3340 --- Applied Deep Learning
+
+    \item[] IY2840 --- Computer and Network Security
+    \item[] CS3480 --- Software Language Engineering
+    \item[] CS3490 --- Computational Optimisation
+    \item[] CS3510 --- Functional Programming and Applications
 \end{itemize}
 
 Common Cores
