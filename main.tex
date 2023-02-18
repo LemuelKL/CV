@@ -2,32 +2,28 @@
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
-\usepackage{titlesec}
+\usepackage[explicit]{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage[inline]{enumitem}
+\usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
+\usepackage{stix}
 \usepackage{pifont}
 \usepackage{tabularx}
+\usepackage{makecell}
 \usepackage{graphicx}
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
-
 \usepackage{subfiles}
 
+% Page styles
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength\parindent{0em}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.530in}
@@ -36,80 +32,95 @@
 \addtolength{\topmargin}{-.45in}
 \addtolength{\textheight}{1in}
 
+% URL links
 \urlstyle{rm}
-
-\newcommand{\jobTitle}[3]{
-\vspace{0.4cm}
-\begin{tabularx}{0.99\linewidth}{ X r }
-    \textbf{#1} & #2\\
-    \textit{#3} &
-\end{tabularx}
-\vspace{0.2cm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Blue,
+    urlcolor=Blue,
+    pdftitle={Kwok-Lam Lee's Curriculum Vitae},
+    pdfpagemode=FullScreen,
 }
 
-% \titleformat{\section}
-% {\scshape\raggedright\LARGE\color{RoyalPurple}}
-% {}
-% {0em}
-% {}
-% [\color{RoyalPurple}{\titlerule[2pt]}\vspace{-0.4cm}]
+% Width of the leftmost column, usually for the dates
+\newcommand{\colwidth}{3.75cm}
 
+% GENERIC CV ENTRY
+\newcommand{\cvEntry}[4]{
+\vspace{0.4cm}
+\begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
+    #1 & \textbf{#2} \hfill {\scshape#3} \newline #4
+\end{tabularx}
+\vspace{-0.3cm}
+}
+
+% EDUCATION ENTRY
+\newcommand{\educationEntry}[4]{
+\vspace{0.4cm}
+\begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
+    #1 & \textbf{#2} \hfill {\scshape#3} \newline #4
+\end{tabularx}
+\vspace{-0.5cm}
+}
+
+% SKILL ENTRY
+\newcommand{\skillEntry}[4]{
+\vspace{0.4cm}
+\begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
+    #1 & #2 \hfill {\scshape#3} \newline #4
+\end{tabularx}
+\vspace{-0.3cm}
+}
+
+% PROJECT ENTRY
+\newcommand{\projectEntry}[4]{
+\vspace{0.4cm}
+\begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
+    #1 & \textbf{#2} \newline #3 \newline #4
+\end{tabularx}
+\vspace{-0.3cm}
+}
+
+% ACTIVITIY ENTRY
+\newcommand{\activityEntry}[5]{
+\vspace{0.4cm}
+\begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
+    #1 & \textbf{#2} \hfill {\scshape#3} \newline #4 \newline #5
+\end{tabularx}
+\vspace{-0.3cm}
+}
+
+% Section and rule
 \newcommand{\raisedrulefill}
 [2]
 [0ex]
-{\leaders\hbox{\rule[#1]{5pt}{#2}}\hfill}
-
+{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
 \titleformat{\section}{\scshape\LARGE\color{RoyalPurple}}
-{}
-{0em}
-{\raisedrulefill[0.4ex]{1pt}}
+{\rule[0.4ex]{\colwidth}{1pt}}
+{0.5cm}
+{#1\quad\raisedrulefill[0.4ex]{1pt}}
 [\vspace{-0.3cm}]
 
-\setlength\parindent{0em}
-
-\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\ding{111}}}
-\renewcommand{\labelitemii}{\textcolor{RoyalPurple}{--}}
+% Entry description list
+\newcommand{\specialitem}{\item[\color{RoyalPurple}\varhexagonlrbonds]}
+\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\varhexagon}}
 \newenvironment{descitemize}
-{ \begin{itemize}[leftmargin=1.4cm,,topsep=0pt]
+{\vspace{-\topsep}\begin{itemize}[leftmargin=0.5cm,,topsep=0pt]
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0pt}     }
-{ \end{itemize}                  } 
+{ \end{itemize}\vspace{-\topsep}                  } 
 
-
+% 
 \begin{document}
 \setlength{\footskip}{3.60004pt}
 
-\begin{tabularx}{0.99\linewidth}{ @{}X r @{\space/\space} r }
-    \textcolor{RoyalPurple}{\scshape\Huge Kwok-Lam Lee} &
-    Computer Science Penultimate Year Student &
-    Aspiring Software Engineer
-\end{tabularx}
-
-\vspace{0.3cm}
-
-\begin{tabular}{@{} l @{\space}l | l @{\space}l | l @{\space}l | l }
-    \faEnvelope[regular] &\href{mailto:lemuellee.kl@gmail.com}{lemuellee.kl@gmail.com} &
-    \faLinkedinIn & \href{https://linkedin.com/in/lemuelkl}{linkedin.com/in/lemuelkl} &
-    +44 & 07597 243 186 &
-    \faMapMarker*\space London
-    \\
-    \faLink &\href{https://lemuellee.com}{lemuellee.com} & \faGithub* & \href{https://www.github.com/LemuelKL}{github.com/LemuelKL} & +852 & 6238 2237 & Hong Kong
-\end{tabular}
-
-
-% \vspace{0.5cm}
-% \hfill
-% \smash{\includegraphics[width=3cm]{avatar-white-small.jpg}}
+\subfile{heading}
 
 \section{Experience}
 \subfile{experience}
 
 \section{Education}
 \subfile{education}
-
-% \vspace{3cm}
-% \section{\LARGE Certifications}
-% \subfile{certifications}
 
 \section{Skills}
 \subfile{skills}
@@ -119,10 +130,5 @@
 
 \section{Activities}
 \subfile{activities}
-
-
-% \section{COURSES}
-% \vspace{0.3cm}
-% \subfile{courses}
 
 \end{document}
