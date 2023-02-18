@@ -1,6 +1,9 @@
 # CV
 
-My personal curriculum vitae in TeX.
+My personal curriculum vitae in LuaLaTeX.
+
+- the main layout is inspired by the `moderncv` package
+- `RoyalPurple` as the theme colour
 
 ## Notes
 
