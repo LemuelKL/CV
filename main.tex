@@ -51,16 +51,15 @@
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
     #1 & \textbf{#2} \hfill {\scshape#3} \newline\vspace{1ex}#4
 \end{tabularx}
-% \vspace{-0.3cm}
 }
 
 % EDUCATION ENTRY
 \newcommand{\educationEntry}[4]{
 \vspace{0.4cm}
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
-    #1 & \textbf{#2} \hfill {\scshape#3} \newline #4
+    #1 & \textbf{#2} \hfill {\scshape#3} \vspace{1ex}\newline #4
 \end{tabularx}
-\vspace{-0.4cm}
+\vspace{-0.3cm}
 }
 
 % SKILL ENTRY
@@ -76,18 +75,16 @@
 \newcommand{\projectEntry}[4]{
 \vspace{0.4cm}
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
-    #1 & \textbf{#2} \quad---\quad #3 \vspace{1ex}\newline #4
+    #1 & \textbf{#2} {\color{RoyalPurple}\leaders\hbox{\hss . \hss}\hfill} {#3} \vspace{2ex}\newline #4
 \end{tabularx}
-% \vspace{-0.2cm}
 }
 
 % ACTIVITIY ENTRY
-\newcommand{\activityEntry}[5]{
+\newcommand{\activityEntry}[4]{
 \vspace{0.4cm}
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
-    #1 & \textbf{#2} \hfill {\scshape#3} \vspace{1ex}\newline#4\newline#5
+    #1 & \textbf{#2} \hfill {\scshape#3} \vspace{1ex}\newline#4
 \end{tabularx}
-\vspace{-0.3cm}
 }
 
 % Section and rule
@@ -102,11 +99,12 @@
 [\vspace{-0.3cm}]
 
 % Entry description list
-\newcommand{\specialitem}{\item[\color{Dandelion}\mdsmblksquare]}
-\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\mdsmblksquare}}
+\newcommand{\specialitem}{\item[\color{RoyalPurple}
+\circledast]}
+\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\mdlgwhtcircle∗}}
 \newenvironment{descitemize}
 {\vspace{-\topsep}
-\begin{itemize}[leftmargin=0.4cm,topsep=0pt]
+\begin{itemize}[leftmargin=0.5cm,topsep=0pt]
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0pt}
 }
@@ -117,13 +115,14 @@
 \setlength{\footskip}{3.60004pt}
 
 \subfile{heading}
-
+\vspace{0.5cm}
 \section{Experience}
 \subfile{experience}
 
 \section{Education}
 \subfile{education}
 
+\vspace{0.3cm}
 \section{Skills}
 \subfile{skills}
 
