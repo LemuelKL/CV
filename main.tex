@@ -49,9 +49,9 @@
 \newcommand{\cvEntry}[4]{
 \vspace{0.4cm}
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
-    #1 & \textbf{#2} \hfill {\scshape#3} \newline #4
+    #1 & \textbf{#2} \hfill {\scshape#3} \newline\vspace{1ex}#4
 \end{tabularx}
-\vspace{-0.3cm}
+% \vspace{-0.3cm}
 }
 
 % EDUCATION ENTRY
@@ -60,7 +60,7 @@
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
     #1 & \textbf{#2} \hfill {\scshape#3} \newline #4
 \end{tabularx}
-\vspace{-0.5cm}
+\vspace{-0.4cm}
 }
 
 % SKILL ENTRY
@@ -69,23 +69,23 @@
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
     #1 & #2 \hfill {\scshape#3} \newline #4
 \end{tabularx}
-\vspace{-0.3cm}
+\vspace{-0.4cm}
 }
 
 % PROJECT ENTRY
 \newcommand{\projectEntry}[4]{
 \vspace{0.4cm}
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
-    #1 & \textbf{#2} \newline #3 \newline #4
+    #1 & \textbf{#2} \quad---\quad #3 \vspace{1ex}\newline #4
 \end{tabularx}
-\vspace{-0.3cm}
+% \vspace{-0.2cm}
 }
 
 % ACTIVITIY ENTRY
 \newcommand{\activityEntry}[5]{
 \vspace{0.4cm}
 \begin{tabularx}{\textwidth}{@{}>{\raggedleft} p{\colwidth} @{\hspace{0.5cm}}X }
-    #1 & \textbf{#2} \hfill {\scshape#3} \newline #4 \newline #5
+    #1 & \textbf{#2} \hfill {\scshape#3} \vspace{1ex}\newline#4\newline#5
 \end{tabularx}
 \vspace{-0.3cm}
 }
@@ -102,13 +102,15 @@
 [\vspace{-0.3cm}]
 
 % Entry description list
-\newcommand{\specialitem}{\item[\color{RoyalPurple}\varhexagonlrbonds]}
-\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\varhexagon}}
+\newcommand{\specialitem}{\item[\color{Dandelion}\mdsmblksquare]}
+\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\mdsmblksquare}}
 \newenvironment{descitemize}
-{\vspace{-\topsep}\begin{itemize}[leftmargin=0.5cm,,topsep=0pt]
+{\vspace{-\topsep}
+\begin{itemize}[leftmargin=0.4cm,topsep=0pt]
     \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0pt}     }
-{ \end{itemize}\vspace{-\topsep}                  } 
+    \setlength{\parsep}{0pt}
+}
+{\end{itemize}\vspace{-\topsep}\vspace{-1pc}} 
 
 % 
 \begin{document}
