@@ -3,18 +3,12 @@
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage[explicit]{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{verbatim}
 \usepackage[inline]{enumitem}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
-\usepackage{stix}
-\usepackage{pifont}
 \usepackage{tabularx}
-\usepackage{makecell}
-\usepackage{graphicx}
 \usepackage{subfiles}
 
 % Page styles
@@ -100,11 +94,19 @@
 
 % Entry description list
 \newcommand{\specialitem}{\item[\color{RoyalPurple}
-\circledast]}
-\renewcommand{\labelitemi}{\textcolor{RoyalPurple}{\mdlgwhtcircle∗}}
+\small{
+\faArrowAltCircleRight[regular]
+}]}
+
+\renewcommand{\labelitemi}
+{\textcolor{RoyalPurple}
+{\small{
+\faCircle[regular]
+}}}
+
 \newenvironment{descitemize}
 {\vspace{-\topsep}
-\begin{itemize}[leftmargin=0.5cm,topsep=0pt]
+\begin{itemize}[leftmargin=0.6cm,topsep=0pt]
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0pt}
 }
